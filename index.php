@@ -11,10 +11,14 @@
    <meta name="author" content="Alexandre DELAUNAY">
    <style>
    body {
-      max-width: 400px;
+      max-width: 600px;
       margin: 0 auto;
    }
 
+   pre {
+      white-space: pre-wrap;
+   }
+      
    label,
    input[type=submit] {
       display: block;

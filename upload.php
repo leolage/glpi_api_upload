@@ -22,8 +22,9 @@ $api_client = new GuzzleHttp\Client(['base_uri' => "$base_uri/apirest.php/"]);
 $response = $api_client->get("initSession/", [
    'headers' => [
       'App-Token' => API_APP_TOKEN,
+      'Authorization' => USER_TOKEN,
    ],
-   'auth' => [API_USER, API_PASSWORD],
+   
 ]);
 if ($response->getStatusCode() != 200
     || !$session_token = json_decode( (string) $response->getBody(), true)['session_token']) {
